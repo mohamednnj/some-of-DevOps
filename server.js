@@ -7,7 +7,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/login",(req,res)=>{
-  res.send("login page fix login done")
+  res.send("login page cookies solved")
 })
 
 app.listen(3000,()=>{
