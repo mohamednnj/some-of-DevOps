@@ -12,4 +12,4 @@ jobs:
         run: echo "test workflow"
 
       - name: check repo
-        run: actions/checkout@v6.0.2
+        run: actions/checkout@v6
