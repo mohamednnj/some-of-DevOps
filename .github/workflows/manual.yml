@@ -1,6 +1,17 @@
 name: manual workflow
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Enter your environment: '
+        required: true
+        default: 'testing'
+        type: choice
+        options:
+          - testing
+          - production
+          - development
+
 jobs:
   test:
     runs-on: ubuntu-latest
