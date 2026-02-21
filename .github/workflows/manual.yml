@@ -2,7 +2,7 @@ name: manual workflow
 on:
   workflow_dispatch:
     inputs:
-      name:
+      environment:
         description: 'Enter your environment: '
         required: true
         default: 'testing'
@@ -18,4 +18,4 @@ jobs:
     steps:
     
       - name: run manual workflow
-        run: echo "manual workflow"
+        run: echo "manual workflow is running in ${{ inputs.environment }} environment"
