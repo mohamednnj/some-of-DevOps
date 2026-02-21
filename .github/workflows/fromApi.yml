@@ -1,7 +1,7 @@
 name: test action workflow form api
 on:
   repository_dispatch:
-    types: [incident_reported]
+    types: [incident_report]
 jobs:
   test:
     runs-on: ubuntu-latest
