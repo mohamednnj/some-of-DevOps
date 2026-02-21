@@ -1,0 +1,29 @@
+name: learn about jobs
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run job 1
+        run: echo "job 1 is running"
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: run job 2
+        run: echo "job 2 is running"
+  job3:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: run job 3
+        run: echo "job 3 is running"
+
+  job4:
+    runs-on: ubuntu-latest
+    needs: [job2, job3]
+    steps:
+      - name: run job 4
+        run: echo "job 4 is running"
