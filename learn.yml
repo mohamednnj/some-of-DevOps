@@ -1,0 +1,17 @@
+# This file to learn how to write yaml file for github actions
+name:SiRRi
+
+age: 21
+salary: 1000
+skills:
+  - Python
+  - JavaScript
+  - GitHub Actions
+is_employed: true
+projects:
+  - name: Project A
+    description: A project to learn GitHub Actions
+    status: ongoing
+  - name: Project B
+    description: A project to practice Python programming
+    status: completed

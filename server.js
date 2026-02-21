@@ -1,15 +1,16 @@
-import express from "express"
+import { pathToFileURL } from 'url';
 
-const app = express()
+function helloWorld(name) {
+  return `Hello, ${name}!`;
+}
 
-app.get("/",(req,res)=>{
-  res.send("hello world")
-})
+export default helloWorld;
 
-app.get("/login",(req,res)=>{
-  res.send("login page cookies solved")
-})
+if (process.argv[1]) {
+  const currentFileUrl = pathToFileURL(process.argv[1]).href;
 
-app.listen(3000,()=>{
-  console.log("server up htpp://127.0.0.1:3000")
-})
+  if (import.meta.url === currentFileUrl) {
+    const name = process.argv[2] || 'World';
+    console.log(helloWorld(name));
+  }
+}

@@ -1,0 +1,19 @@
+name: test web app
+on:
+  push:
+    branches:
+      - main
+
+  
+ jobs:  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check repo
+        uses: actions/checkout@v6
+
+      - name: listing files
+        run: ls -la
+
+      - name: run tests
+        run: npm test
